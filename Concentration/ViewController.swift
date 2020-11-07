@@ -13,26 +13,39 @@ class ViewController: UIViewController {
     @IBOutlet var flipsCountLabel: UILabel!
     @IBOutlet var newGameButton: UIButton!
     
-    var emojis = ["🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🍈", "🥕", "🍆","🌽","🧅"]
+    var themes = [
+        ["🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🍈", "🥕", "🍆","🌽","🧅"],
+        ["🐶", "🐱", "🐭", "🐧", "🐥", "🐝", "🐠", "🐒", "🐳", "🦈", "🐸", "🐼","🦂","🐅"],
+        ["⚽️", "🏀", "🏈", "⚾️", "🥎", "🎾", "🏐", "🏉", "🥏", "🎱", "🪀", "🏓","🏸","🏑"],
+        ["🚗", "🚕", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🛴", "🚲", "🛵", "✈️","🚊","🚀"],
+        ["⌚️", "📱", "💻", "📞", "☎️", "📟", "📠", "📺", "⏰", "🔌", "💡", "🔦","💿","📡"],
+        ["🇵🇰", "🇹🇷", "🇺🇸", "🇰🇷", "🇨🇭", "🇸🇦", "🇲🇾", "🇮🇳", "🇨🇦", "🇨🇳", "🇸🇻", "🇯🇵","🇱🇧","🎌"],
+    ]
+    var emojis : [String]!
     var game: Concentration!
     var flipsCounter = 0
     
     func resetUI(){
+        emojis = themes.randomElement()
         for cardButton in cardButtons {
             cardButton.setTitle("", for: .normal)
             cardButton.backgroundColor = .systemOrange
         }
+        flipsCounter = 0
+        flipsCountLabel.text = "Flips: \(flipsCounter)"
+        flipsCountLabel.sizeToFit()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         assert(cardButtons.count % 2 == 0, "Number of cards must be even.")
         let numberOfPairs = cardButtons.count/2
-        assert(numberOfPairs <= emojis.count, "Number of pairs greater that number of emojis available.")
         startNewGame(numberOfPairs: numberOfPairs)
     }
     func startNewGame(numberOfPairs: Int) {
         resetUI()
+        assert(numberOfPairs <= emojis.count, "Number of pairs greater that number of emojis available.")
         game = Concentration(numberOfPairs: numberOfPairs)
     }
     @IBAction func cardTouched(_ sender: UIButton) {
