@@ -33,7 +33,9 @@ class ViewController: UIViewController {
         }
         flipsCountLabel.text = "Flips: 0"
         flipsCountLabel.sizeToFit()
+        flipsCountLabel.sizeToFit()
         scoreLabel.text = "Score: 0"
+        scoreLabel.sizeToFit()
     }
     
     override func viewDidLoad() {
