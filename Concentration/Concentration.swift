@@ -42,5 +42,6 @@ class Concentration {
             cards.append(newCard)
             cards.append(newCard2)
         }
+        cards.shuffle()
     }
 }
