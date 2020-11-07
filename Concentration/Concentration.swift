@@ -12,6 +12,8 @@ class Concentration {
     var cards = [Card]()
     var singleCardFacingUpAt: Int?
     var score = 0
+    var flipsCount = 0
+    
     func addACardPair(withIdentifier identifier: Int){
         cards += [Card(identifier: identifier), Card(identifier: identifier)]
     }
@@ -34,12 +36,14 @@ class Concentration {
             }
             singleCardFacingUpAt = nil
             chosenCard.isFaceUp = true
+            flipsCount += 1
         } else {
             for card in cards {
                 card.isFaceUp = false
             }
             singleCardFacingUpAt = index
             chosenCard.isFaceUp = true
+            flipsCount += 1
         }
         chosenCard.seen = true
     }

@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     ]
     var emojis : [String]!
     var game: Concentration!
-    var flipsCounter = 0
     
     func resetUI(){
         emojis = themes.randomElement()
@@ -32,8 +31,7 @@ class ViewController: UIViewController {
             cardButton.setTitle("", for: .normal)
             cardButton.backgroundColor = .systemOrange
         }
-        flipsCounter = 0
-        flipsCountLabel.text = "Flips: \(flipsCounter)"
+        flipsCountLabel.text = "Flips: 0"
         flipsCountLabel.sizeToFit()
         scoreLabel.text = "Score: 0"
     }
@@ -58,8 +56,7 @@ class ViewController: UIViewController {
             }
             game.chooseCard(at: index)
         }
-        flipsCounter += 1
-        flipsCountLabel.text = "Flips: \(flipsCounter)"
+        flipsCountLabel.text = "Flips: \(game.flipsCount)"
         flipsCountLabel.sizeToFit()
         scoreLabel.text = "Score: \(game.score)"
         scoreLabel.sizeToFit()
