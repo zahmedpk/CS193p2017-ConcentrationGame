@@ -15,7 +15,7 @@
 		3DCCBCF325552D0C0032FD65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DCCBCF125552D0C0032FD65 /* LaunchScreen.storyboard */; };
 		3DCCBCFE25552D0C0032FD65 /* ConcentrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCBCFD25552D0C0032FD65 /* ConcentrationTests.swift */; };
 		3DCCBD0925552D0C0032FD65 /* ConcentrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCBD0825552D0C0032FD65 /* ConcentrationUITests.swift */; };
-		3DCCBD2025559FBD0032FD65 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCBD1F25559FBD0032FD65 /* Game.swift */; };
+		3DCCBD2025559FBD0032FD65 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCBD1F25559FBD0032FD65 /* Concentration.swift */; };
 		3DCCBD2225559FF50032FD65 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCBD2125559FF50032FD65 /* Card.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		3DCCBD0425552D0C0032FD65 /* ConcentrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentrationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DCCBD0825552D0C0032FD65 /* ConcentrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationUITests.swift; sourceTree = "<group>"; };
 		3DCCBD0A25552D0C0032FD65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DCCBD1F25559FBD0032FD65 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3DCCBD1F25559FBD0032FD65 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		3DCCBD2125559FF50032FD65 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +107,7 @@
 				3DCCBCEA25552D0A0032FD65 /* ViewController.swift */,
 				3DCCBCEC25552D0A0032FD65 /* Main.storyboard */,
 				3DCCBCF425552D0C0032FD65 /* Info.plist */,
-				3DCCBD1F25559FBD0032FD65 /* Game.swift */,
+				3DCCBD1F25559FBD0032FD65 /* Concentration.swift */,
 				3DCCBD2125559FF50032FD65 /* Card.swift */,
 			);
 			path = Concentration;
@@ -277,7 +277,7 @@
 				3DCCBCE725552D0A0032FD65 /* AppDelegate.swift in Sources */,
 				3DCCBD2225559FF50032FD65 /* Card.swift in Sources */,
 				3DCCBCE925552D0A0032FD65 /* SceneDelegate.swift in Sources */,
-				3DCCBD2025559FBD0032FD65 /* Game.swift in Sources */,
+				3DCCBD2025559FBD0032FD65 /* Concentration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

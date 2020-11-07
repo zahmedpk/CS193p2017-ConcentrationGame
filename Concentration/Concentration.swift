@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Game {
+class Concentration {
     var cards = [Card]()
     var singleCardFacingUpAt: Int?
     func addACardPair(withIdentifier identifier: Int){
@@ -24,7 +24,6 @@ class Game {
             if chosenCard.identifier == card2.identifier {
                 chosenCard.isMatched = true
                 card2.isMatched = true
-                print("got matching pair")
             }
             singleCardFacingUpAt = nil
             chosenCard.isFaceUp = true
@@ -34,6 +33,14 @@ class Game {
             }
             singleCardFacingUpAt = index
             chosenCard.isFaceUp = true
+        }
+    }
+    init(numberOfPairs: Int) {
+        for identifier in 0..<numberOfPairs {
+            let newCard = Card(identifier: identifier)
+            let newCard2 = Card(identifier: identifier)
+            cards.append(newCard)
+            cards.append(newCard2)
         }
     }
 }
