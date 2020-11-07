@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var cardButtons: [UIButton]!
     @IBOutlet var flipsCountLabel: UILabel!
     @IBOutlet var newGameButton: UIButton!
+    @IBOutlet var scoreLabel: UILabel!
     
     var themes = [
         ["🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🍈", "🥕", "🍆","🌽","🧅"],
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
         flipsCounter = 0
         flipsCountLabel.text = "Flips: \(flipsCounter)"
         flipsCountLabel.sizeToFit()
-        
+        scoreLabel.text = "Score: 0"
     }
     
     override func viewDidLoad() {
@@ -60,6 +61,8 @@ class ViewController: UIViewController {
         flipsCounter += 1
         flipsCountLabel.text = "Flips: \(flipsCounter)"
         flipsCountLabel.sizeToFit()
+        scoreLabel.text = "Score: \(game.score)"
+        scoreLabel.sizeToFit()
         for (index, card) in game.cards.enumerated() {
             let button = cardButtons[index]
             if card.isMatched && card.identifier != touchedCard.identifier {

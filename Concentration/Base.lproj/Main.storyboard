@@ -247,6 +247,13 @@
                                     <action selector="newGameButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hXU-ZD-DmZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2V3-dD-qnm">
+                                <rect key="frame" x="20" y="761" width="143" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -254,6 +261,7 @@
                     <connections>
                         <outlet property="flipsCountLabel" destination="Gvh-rx-QEL" id="oSd-sb-27C"/>
                         <outlet property="newGameButton" destination="7HM-ZZ-JrJ" id="BZP-9m-QlC"/>
+                        <outlet property="scoreLabel" destination="2V3-dD-qnm" id="vSS-Rw-Cq2"/>
                         <outletCollection property="cardButtons" destination="MsQ-fe-LKo" collectionClass="NSMutableArray" id="ETw-iQ-cdt"/>
                         <outletCollection property="cardButtons" destination="s0R-J6-xVf" collectionClass="NSMutableArray" id="pvu-4K-QVJ"/>
                         <outletCollection property="cardButtons" destination="xtc-qP-Qqe" collectionClass="NSMutableArray" id="RB1-B2-eXn"/>

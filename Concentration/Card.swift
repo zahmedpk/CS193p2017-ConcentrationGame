@@ -12,6 +12,7 @@ class Card: CustomStringConvertible {
     var identifier: Int
     var isFaceUp = false
     var isMatched = false
+    var seen = false
     init(identifier: Int) {
         self.identifier = identifier
     }

@@ -11,6 +11,7 @@ import Foundation
 class Concentration {
     var cards = [Card]()
     var singleCardFacingUpAt: Int?
+    var score = 0
     func addACardPair(withIdentifier identifier: Int){
         cards += [Card(identifier: identifier), Card(identifier: identifier)]
     }
@@ -24,6 +25,12 @@ class Concentration {
             if chosenCard.identifier == card2.identifier {
                 chosenCard.isMatched = true
                 card2.isMatched = true
+                score += 2
+            } else if chosenCard.seen {
+                score -= 1
+                if score < 0 {
+                    score = 0
+                }
             }
             singleCardFacingUpAt = nil
             chosenCard.isFaceUp = true
@@ -34,6 +41,7 @@ class Concentration {
             singleCardFacingUpAt = index
             chosenCard.isFaceUp = true
         }
+        chosenCard.seen = true
     }
     init(numberOfPairs: Int) {
         for identifier in 0..<numberOfPairs {
